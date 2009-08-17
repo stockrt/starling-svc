@@ -5,9 +5,9 @@
 
 Provides an easy way to put your starling under daemontools supervise.
 
-Setting the user for starling daemon:
+Setting the user and group for starling daemon:
     groupadd starling
     useradd -g starling -d /var/spool/starling -s /bin/false starling
 
 daemontools: http://cr.yp.to/daemontools.html
-Main project: http://rubyforge.org/projects/starling
+Main project: http://github.com/starling/starling
