@@ -1,0 +1,9 @@
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+Provides an easy way to put your starling under daemontools supervise.
+
+daemontools: http://cr.yp.to/daemontools.html
+Main project: http://rubyforge.org/projects/starling

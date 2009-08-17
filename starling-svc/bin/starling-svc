@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#
+# Author: Rogério Carvalho Schneider <stockrt@gmail.com>
+# URL:    http://stockrt.github.com
+#
+
+# STARLING_USER, STARLING_BASEDIR and STARLING_LOG
+source /usr/local/starling-svc/conf/starling-svc.conf && \
+cd $STARLING_BASEDIR && \
+exec setuidgid $STARLING_USER /usr/bin/starling -L $STARLING_LOG
