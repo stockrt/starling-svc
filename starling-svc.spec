@@ -1,6 +1,6 @@
 Name:      starling-svc
 Version:   0.1.0
-Release:   2
+Release:   3
 Summary:   starling-svc daemontools configuration
 Group:     System/Server
 URL:       http://stockrt.github.com
@@ -72,6 +72,9 @@ svclist='starling'
 %svc_unregsrv
 
 %changelog
+* Fri Aug 21 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-3
+- STARLING_LISTEN_ADDRESS and STARLING_LISTEN_PORT are configurable
+
 * Tue Aug 18 2009 - Rogério Carvalho Schneider <stockrt@gmail.com> - 0.1.0-2
 - Added exec fd redir (exec 2>&1)
 

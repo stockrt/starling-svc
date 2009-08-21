@@ -5,7 +5,8 @@
 # URL:    http://stockrt.github.com
 #
 
-# STARLING_USER, STARLING_GROUP, STARLING_SPOOL, STARLING_LOG and STARLING_BASEDIR
+# STARLING_USER, STARLING_GROUP, STARLING_LISTEN_ADDRESS,
+# STARLING_LISTEN_PORT, STARLING_SPOOL, STARLING_LOG and STARLING_BASEDIR
 source /usr/local/starling-svc/conf/starling-svc.conf
 
 # pid
@@ -21,4 +22,7 @@ touch $STARLING_LOG > /dev/null 2>&1
 chown $STARLING_USER:$STARLING_GROUP $STARLING_LOG > /dev/null 2>&1
 
 cd $STARLING_BASEDIR && \
-exec setuidgid $STARLING_USER /usr/bin/starling -L $STARLING_LOG
+exec setuidgid $STARLING_USER /usr/bin/starling \
+    -h $STARLING_LISTEN_ADDRESS \
+    -p $STARLING_LISTEN_PORT \
+    -L $STARLING_LOG
